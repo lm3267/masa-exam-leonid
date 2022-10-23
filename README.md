@@ -124,7 +124,7 @@ WHERE parents IS NULL
 	function sumArray(arr: number[]): number {
 		let arrSum : number = 0;
 		for (let i = 0; i < arr.length; ++i) {
-			arrSum += a[i];
+			arrSum += arr[i];
 		}
 		return arrSum;
 	}
