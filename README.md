@@ -92,24 +92,16 @@ It is a software, that is in between the applications and the operating system.
 
 16. **You received a bug stating the following: "Intermittently the following method results in a system getting stuck." You're required to find and fix the problem in this method:** *=> 10 points*
 
-		public static addMonths(date: Date, value: number): Date {
-		    let expectedMonth: number = date.getMonth() + value;
-		    if (expectedMonth > 12) {
-		        expectedMonth = expectedMonth % 12;
-		    }
-    
-		    if (expectedMonth === 0) {
-		        expectedMonth += 12;
-	        }
-    
-		    date.setMonth(expectedMonth);
-	        <!-- const daysToAdd: number = date.getMonth() >  expectedMonth ? -1 : 1;
-	        while (date.getMonth() !== expectedMonth) {
-		        date.setDate(date.getDate() + daysToAdd);
-		    } -->
-    
-		    return date;
-	    }
+		function addMonths(date: Date, value: number): Date {
+			let expectedMonth: number = date.getMonth() + value;
+			if (expectedMonth > 11) {
+				expectedMonth = expectedMonth % 12;
+			}
+
+			date.setMonth(expectedMonth);
+			if (date.getMonth() > expectedMonth) date.setDate(0);    
+			return date;
+		}
 
 17. **Having the following DB tables diagram:** *=> 10 points*
 
