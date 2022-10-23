@@ -72,7 +72,7 @@
 ## Section B: Please, explain the following terms the best way you can *=> 22 points*
 
 11. **Authentication & Authorization** *=> 7 points*
-Authentication is a process, where the system understands who the user is. Authorization is a process, where the system understands what the user can access (basically determening the user's role in the system).
+Authentication is a process, where the system understands who the user is and generates the token. Authorization is a process, where the system understands what the user can access (basically determening the user's role in the system).
 
 12. **Stored procedure** *=> 3 points*
 It is an SQL function, that you can reuse in your code.
