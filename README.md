@@ -115,6 +115,10 @@ You need to write a query that returns for each student his/her parents' informa
 | Mary Smith | Klark Smith (07-2134897) |
 | Patrice Raymond | Orphan |
 
+UPDATE (SELECT * from student st LEFT JOIN parent_to_student pts  ON pts.student_id=st.id LEFT JOIN parents pr ON pr.id = pts.parents_id)
+SET parents = 'orphan'
+WHERE ISNULL(parents)
+
 18. **Write a method in JS/TS that gets as an argument an array of numbers and returns the sum of all array members**. *=> 5 points*
 
 	public sumArray(arr: number[]): number {
