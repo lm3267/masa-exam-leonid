@@ -170,9 +170,9 @@ This code takes the variable 'input' and adds zeroes to the left of it, so that 
 					this.getRole(roleId)
 				])
 				.then((results: [user | role]) => {
-					return results[1].userIds.indexOf(results[0].id) > -1;
-					resolve(results[0]);
-				});
+					if (results[1].userIds.indexOf(results[0].id) > -1) resolve(results[0]);
+					else reject(results[0]);
+				})
 			});
 		}
 		
