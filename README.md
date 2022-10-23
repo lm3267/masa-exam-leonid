@@ -121,7 +121,7 @@ WHERE parents IS NULL
 
 18. **Write a method in JS/TS that gets as an argument an array of numbers and returns the sum of all array members**. *=> 5 points*
 
-	public sumArray(arr: number[]): number {
+	function sumArray(arr: number[]): number {
 		let arrSum : number = 0;
 		for (let i = 0; i < arr.length; ++i) {
 			arrSum += a[i];
