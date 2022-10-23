@@ -19,7 +19,7 @@ interface localWhiteBoardType {
 interface ISchoolService {
 
 
-    getBoardTypes(): Promise<whiteBoardType>;
+    getBoardTypes(): Promise<whiteBoardType[]>;
     getBoardTypeById(id: number): Promise<whiteBoardType>;
     updateBoardTypeById(whiteBoardType: whiteBoardType, userId: number): Promise<whiteBoardType>;
     addBoardType(whiteBoardType: whiteBoardType, userId: number): Promise<whiteBoardType>;
@@ -40,7 +40,7 @@ export class SchoolService implements ISchoolService {
 
     public getBoardTypes(): Promise<whiteBoardType[]> {
         return new Promise<whiteBoardType[]>((resolve, reject) => {
-            let result: whiteBoardType[];
+            const result: whiteBoardType[] = [];
 
             SqlHelper.executeQueryArrayResult<localWhiteBoardType>(this._errorService, Queries.WhiteBoardTypes, Status.Active)
                 .then((queryResult: localWhiteBoardType[]) => {
