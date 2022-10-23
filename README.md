@@ -11,30 +11,30 @@
 1. **What is a PR?** *=> 2 points*
  - [ ] Program Result: the outcome of a programming effort available for testing
  - [ ] Public Relations: a practice of managing and influencing an organizational info to the public
- - [ ] Pull Request: a request to review the code of a developer prior to merging it main branch
+ - [x] Pull Request: a request to review the code of a developer prior to merging it main branch
  - [ ] Private Role: A security role that is used in internal system processing
 
 2. **What is the role of a service in nodejs server architecture?** *=> 2 points*
- - [ ] Get the request from the router, treat the request parameters, prepare the response of the server to the consumer
+ - [x] Get the request from the router, treat the request parameters, prepare the response of the server to the consumer
  - [ ] Keep state of a specific logic portion of the system, provide processing of the data passed from the different controllers, parse the data and returned the processed response
  - [ ] To be the first element in the system that should service the consumer for his CRUD request to the server
  - [ ] To provide services to the system that do not require a state but should be used across the whole system
 
 3. **What is INNER JOIN?** *=> 2 points*
  - [ ] A mechanism to link between to tables in the SQL query to bring data based on the same value in two tables. Allows NULL values on one on the sides of the JOIN
- - [ ] A mechanism to link between to tables in the SQL query to bring data based on the same value in two tables. Only non NULL values are accepted for both sides of the JOIN
+ - [x] A mechanism to link between to tables in the SQL query to bring data based on the same value in two tables. Only non NULL values are accepted for both sides of the JOIN
  - [ ] A way of executing to `foreach` loops in JS/TS while the internal loop uses values of the external loop
  - [ ] Such a term does not exist
 
 4. **What is the code of a server error in HTTP protocol?** *=> 2 points*
  - [ ] 2xx
  - [ ] 3xx
- - [ ] 4xx
+ - [x] 4xx
  - [ ] 5xx
 
 5. **What is the correct flow a story?** *=> 2 points*
  - [ ] Software Detailed Design (SDD), Product design, QA review, UI design, Development, QA testing, Customer review
- - [ ] Customer request, Product design, UI design, SDD, QA review, Development, QA testing, Customer User Acceptance Testing (UAT)
+ - [x] Customer request, Product design, UI design, SDD, QA review, Development, QA testing, Customer User Acceptance Testing (UAT)
  - [ ] Product design, SDD, QA review, UI design, Development, QA testing, UAT
  - [ ] Customer request, UI design, Product design, UAT, QA review, Development, QA testing
 
@@ -42,10 +42,10 @@
  - [ ] Browser
  - [ ] Postman
  - [ ] Fiddler
- - [ ] All answers are correct
+ - [x] All answers are correct
 
 7. **What is the most secure way to connect to SQL Server?** *=> 2 points*
- - [ ] Integrated security
+ - [x] Integrated security
  - [ ] Mixed mode
  - [ ] SQL Server login
  - [ ] Application role
@@ -53,34 +53,38 @@
 8. **What is the correct pair of a protocol and the port for secure HTTP communication?** *=> 2 points*
  - [ ] HTTP:80
  - [ ] HTTPS:80
- - [ ] HTTPS:443
+ - [x] HTTPS:443
  - [ ] HTTP:443
 
 9. **What is a trigger?** *=> 2 points*
- - [ ] Trigger is a piece of code executed by the database engine whenever some action is performed on a database object like tables, view, etc.
+ - [x] Trigger is a piece of code executed by the database engine whenever some action is performed on a database object like tables, view, etc.
  - [ ] Trigger is a method that is called JS/TS environment whenever a certain event is fired to complete an asynchronous code execution
  - [ ] Trigger is a processing being performed right after the merge of a code to main branch in order to run a build for the system
  - [ ] Trigger is the mechanism by which the router is sending its data to the controller in nodejs server
 
 10. **Why would you use the JWT token? (more than a single answer can be selected)** *=> 2 points*
- - [ ] JWT tokens are encrypted
+ - [x] JWT tokens are encrypted
  - [ ] It's a more secure way of handling authentication and authorization data than username and password
- - [ ] JWT tokens are signed and this signature can be verified uniquely
+ - [x] JWT tokens are signed and this signature can be verified uniquely
  - [ ] All answers are correct
 
 
 ## Section B: Please, explain the following terms the best way you can *=> 22 points*
 
 11. **Authentication & Authorization** *=> 7 points*
+Authentication is a process, where the system understands who the user is. Authorization is a process, where the system understands what the user can access (basically determening the user's role in the system).
 
 12. **Stored procedure** *=> 3 points*
+It is an SQL function, that you can reuse in your code.
 
 13. **Git rebase** *=> 4 points*
+It is a process of moving a couple of commits to a new commit. 
 
 14. **Generics** *=> 4 points*
+This is a type of structure, that can be used by other structures and they will share the features, that are implemented in a generic structure.
 
 15. **Middleware** *=> 4 points*
-
+It is a software, that is in between the applications and the operating system.
  
 ## Part II: Practice on paper *=> 45 points*
 
@@ -94,17 +98,17 @@
 		        expectedMonth = expectedMonth % 12;
 		    }
     
-		    if (expectedMonth < 0) {
+		    if (expectedMonth === 0) {
 		        expectedMonth += 12;
 	        }
     
-		    date.setMonth(date.getMonth() + value);
-	        const daysToAdd: number = date.getMonth() >  expectedMonth ? -1 : 1;
+		    date.setMonth(expectedMonth);
+	        <!-- const daysToAdd: number = date.getMonth() >  expectedMonth ? -1 : 1;
 	        while (date.getMonth() !== expectedMonth) {
 		        date.setDate(date.getDate() + daysToAdd);
-		    }
+		    } -->
     
-		    return  date;
+		    return date;
 	    }
 
 17. **Having the following DB tables diagram:** *=> 10 points*
@@ -120,6 +124,15 @@ You need to write a query that returns for each student his/her parents' informa
 | Patrice Raymond | Orphan |
 
 18. **Write a method in JS/TS that gets as an argument an array of numbers and returns the sum of all array members**. *=> 5 points*
+
+	public sumArray(arr: number[]): number {
+		let arrSum : number = 0;
+		for (let i = 0; i < arr.length; ++i) {
+			arrSum += a[i];
+		}
+		return arrSum;
+	}
+
 
 19. **Explain the following piece of code:** *=> 5 points*
 
