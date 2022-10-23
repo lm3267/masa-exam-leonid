@@ -137,6 +137,8 @@ WHERE ISNULL(parents)
 			return Array(+(zeroes > 0 && zeroes)).join("0") + input.toString();
 		}
 
+This code takes the variable 'input' and adds zeroes to the left of it, so that the resulting number of digits is equal to the value 'places'. If 'input' > 'places', the program just returns 'input'.
+
 20. **Fix the following code and fill the required gaps in it by the coding standards. The purpose of this code is to verify the user is a member of a specific role and in case the user is the user data is returned by the isUserPermitted() method. Treat the comments as actual code written that should not be changed:** *=> 15 points*
 
 		interface user {
